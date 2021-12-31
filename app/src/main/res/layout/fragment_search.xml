@@ -7,45 +7,6 @@
     android:background="@color/mainDarkBg"
     tools:context="com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.SearchFragment">
 
-    <LinearLayout
-        android:id="@+id/searchBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="-30dp"
-            android:src="@drawable/ic_search" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/white"
-
-            android:paddingStart="30dp"
-            android:textColor="@color/white"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorLink="#FFFFFF" />
-    </LinearLayout>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/firstRecyclerViewInSearchFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
-        app:layout_constraintStart_toStartOf="@id/guideLineStart"
-        app:layout_constraintTop_toBottomOf="@id/searchBar" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideLineStart"
@@ -60,5 +21,96 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".97" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideLineStart"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="-30dp"
+                    android:src="@drawable/ic_search" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:backgroundTint="@color/white"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="New"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/firstRecyclerViewInSearchFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/searchBar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Recommended"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/secondRecyclerViewInSearchFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/searchBar" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,18 +3,60 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="210dp"
     android:layout_gravity="center_horizontal"
-    android:layout_margin="25dp">
+    android:layout_margin="25dp"
+    >
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/firstRecyclerViewInSearchFragment"
         android:layout_width="290dp"
-        app:shapeAppearanceOverlay="@style/movieImagesCornerRadius"
         android:layout_height="165dp"
         android:src="@drawable/images"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/movieImagesCornerRadius" />
+
+    <TextView
+        android:id="@+id/nameOfMovie"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Name"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstRecyclerViewInSearchFragment" />
+
+    <TextView
+        android:id="@+id/dateOfYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:text="2021"
+        android:textColor="#F1F8E9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameOfMovie" />
+
+    <ImageView
+        android:id="@+id/MovieStarImage"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/firstRecyclerViewInSearchFragment"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="4.7"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/MovieStarImage"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
