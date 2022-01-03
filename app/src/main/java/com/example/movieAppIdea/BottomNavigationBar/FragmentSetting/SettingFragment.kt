@@ -45,45 +45,36 @@ class SettingFragment : Fragment() {
     ): View? {
 
 
-
         return inflater.inflate(R.layout.fragment_setting, container, false)
     }
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        val firstRecyclerViewInSearchFragment =
-//            view.findViewById<RecyclerView>(R.id.firstRecyclerViewInSettingFragment)
+        val firstRecyclerViewInSearchFragment =
+            view.findViewById<RecyclerView>(R.id.firstRecyclerViewInSettingFragment)
         val secondRecyclerViewInSearchFragment =
             view.findViewById<RecyclerView>(R.id.secondRecyclerViewInSettingFragment)
         val thirdRecyclerViewInSearchFragment =
             view.findViewById<RecyclerView>(R.id.thirdRecyclerViewInSearchFragment)
         val fourthRecyclerViewInSearchFragment =
             view.findViewById<RecyclerView>(R.id.fourthRecyclerViewInSearchFragment)
-//        addRecyclerViewForFirstRVSearchFirst(
-//            firstRecyclerViewInSearchFragment,
-//            movieImagesForSearchFragmentRecyclerView1
-//        )
-        addRecyclerViewForFirstRVSearchSecond(
+        addRecyclerViewForFirstRVSearchFirst(
+            firstRecyclerViewInSearchFragment,
+            movieImagesForSearchFragmentRecyclerView1
+        )
+        addRecyclerViewForRVSearchSecond(
             secondRecyclerViewInSearchFragment,
             movieImagesForSearchFragmentRecyclerView2
         )
-        addRecyclerViewForFirstRVSearchSecond(
+        addRecyclerViewForRVSearchSecond(
             thirdRecyclerViewInSearchFragment,
             movieImagesForSearchFragmentRecyclerView1
         )
-        addRecyclerViewForFirstRVSearchSecond(
+        addRecyclerViewForRVSearchSecond(
             fourthRecyclerViewInSearchFragment,
             movieImagesForSearchFragmentRecyclerView2
         )
-
-
-        /*firstRecyclerViewInSearchFragment?.layoutManager =
-            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        firstRecyclerViewInSearchFragment?.adapter =
-            FirstRecyclerViewAdapterOfSearchFragment(movieImagesForSearchFragmentRecyclerView1)
-            */
     }
 
 
@@ -99,23 +90,20 @@ class SettingFragment : Fragment() {
 
     }
 
-    private fun addRecyclerViewForFirstRVSearchSecond(
+    private fun addRecyclerViewForRVSearchSecond(
         RView: RecyclerView,
         imagesList: ArrayList<Int>
     ) {
-
         RView.layoutManager =
-            LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         RView.adapter =
-            SecondRecyclerViewAdapterOfSearchActivity(imagesList)
-
+            FirstRecyclerViewAdapterOfSearchFragment(imagesList)
     }
 
     companion object {
-
         @JvmStatic
         fun newInstance() =
-            AccountFragment().apply {
+            SettingFragment().apply {
                 arguments = Bundle().apply {}
             }
     }
