@@ -44,22 +44,23 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, view: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-
-//        return firstRecyclerViewInSearchFragment
         return inflater.inflate(R.layout.fragment_search, view, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentSearchBinding.inflate(layoutInflater)
         super.onViewCreated(view, savedInstanceState)
-        val firstRecyclerViewInSearchFragment =view.findViewById<RecyclerView>(R.id.firstRecyclerViewInSearchFragment)
-        val secondRecyclerViewInSearchFragment =view.findViewById<RecyclerView>(R.id.secondRecyclerViewInSearchFragment)
+        val firstRecyclerViewInSearchFragment =
+            view.findViewById<RecyclerView>(R.id.firstRecyclerViewInSearchFragment)
+        val secondRecyclerViewInSearchFragment =
+            view.findViewById<RecyclerView>(R.id.secondRecyclerViewInSearchFragment)
+
         addRecyclerViewForFirstRVSearchFirst(
-            firstRecyclerViewInSearchFragment,
-            movieImagesForSearchFragmentRecyclerView1
+            firstRecyclerViewInSearchFragment, movieImagesForSearchFragmentRecyclerView1
         )
-        addRecyclerViewForFirstRVSearchSecond(secondRecyclerViewInSearchFragment,movieImagesForSearchFragmentRecyclerView2)
+        addRecyclerViewForFirstRVSearchSecond(
+            secondRecyclerViewInSearchFragment, movieImagesForSearchFragmentRecyclerView2
+        )
 
 
         /*firstRecyclerViewInSearchFragment?.layoutManager =
@@ -70,7 +71,6 @@ class SearchFragment : Fragment() {
     }
 
     companion object {
-
         @JvmStatic
         fun newInstance() =
             SearchFragment().apply {
@@ -78,7 +78,10 @@ class SearchFragment : Fragment() {
             }
     }
 
-    private fun addRecyclerViewForFirstRVSearchFirst(RView: RecyclerView, imagesList: ArrayList<Int>) {
+    private fun addRecyclerViewForFirstRVSearchFirst(
+        RView: RecyclerView,
+        imagesList: ArrayList<Int>
+    ) {
 
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
@@ -86,7 +89,11 @@ class SearchFragment : Fragment() {
             FirstRecyclerViewAdapterOfSearchFragment(imagesList)
 
     }
-    private fun addRecyclerViewForFirstRVSearchSecond(RView: RecyclerView, imagesList: ArrayList<Int>) {
+
+    private fun addRecyclerViewForFirstRVSearchSecond(
+        RView: RecyclerView,
+        imagesList: ArrayList<Int>
+    ) {
 
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)

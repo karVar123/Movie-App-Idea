@@ -9,9 +9,9 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideLineStart"
+        android:id="@id/guideLineStart"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".03" />
 
@@ -27,8 +27,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideLineEnd"
-        app:layout_constraintStart_toStartOf="@+id/guideLineStart"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,18 +91,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:text="Recommended"
-                    android:textColor="@color/white"
-                    android:textSize="20dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/secondRecyclerViewInSearchFragment"
