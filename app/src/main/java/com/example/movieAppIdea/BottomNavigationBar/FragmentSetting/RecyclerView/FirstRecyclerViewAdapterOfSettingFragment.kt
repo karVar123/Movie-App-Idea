@@ -9,8 +9,8 @@ import com.example.movieAppIdea.R
 import kotlin.collections.ArrayList
 
 
-class FirstRecyclerViewAdapterOfSearchFragment(private val testImage: ArrayList<Int>) :
-    RecyclerView.Adapter<FirstRecyclerViewAdapterOfSearchFragment.CarViewHolder>() {
+class FirstRecyclerViewAdapterOfSettingFragment(private val testImage: ArrayList<Int>) :
+    RecyclerView.Adapter<FirstRecyclerViewAdapterOfSettingFragment.CarViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

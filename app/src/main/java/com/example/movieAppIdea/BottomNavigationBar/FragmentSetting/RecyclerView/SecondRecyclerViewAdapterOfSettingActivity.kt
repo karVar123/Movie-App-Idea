@@ -3,13 +3,12 @@ package com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerVie
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieAppIdea.R
 
 
-class SecondRecyclerViewAdapterOfSearchActivity(private val testImage: ArrayList<Int>) :
-    RecyclerView.Adapter<SecondRecyclerViewAdapterOfSearchActivity.MovieViewHolder>() {
+class SecondRecyclerViewAdapterOfSettingActivity(private val testImage: ArrayList<Int>) :
+    RecyclerView.Adapter<SecondRecyclerViewAdapterOfSettingActivity.MovieViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
@@ -19,13 +18,13 @@ class SecondRecyclerViewAdapterOfSearchActivity(private val testImage: ArrayList
         )
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.movieImageForSecondRecycleViewSearchFragment?.setImageResource(testImage[position])
+//        holder.movieImageForSecondRecycleViewSearchFragment?.setImageResource(testImage[position])
     }
 
     override fun getItemCount() = testImage.size
 
     inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val movieImageForSecondRecycleViewSearchFragment: ImageView? =
-            itemView?.findViewById(R.id.movieImageOSecondRecyclerViewItem)
+//        val movieImageForSecondRecycleViewSearchFragment: ImageView? =
+//            itemView?.findViewById(R.id.movieImageOSecondRecyclerViewItem)
     }
 }

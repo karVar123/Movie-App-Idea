@@ -7,44 +7,41 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movieAppIdea.BottomNavigationBar.FragmentAccount.AccountFragment
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.RecyclerView.FirstRecyclerViewAdapterOfSearchFragment
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.RecyclerView.SecondRecyclerViewAdapterOfSearchActivity
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.FirstRecyclerViewAdapterOfSettingFragment
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.SecondRecyclerViewAdapterOfSettingActivity
 import com.example.movieAppIdea.R
 
 class SettingFragment : Fragment() {
     private val movieImagesForSearchFragmentRecyclerView1 = arrayListOf(
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__4,
     )
     private val movieImagesForSearchFragmentRecyclerView2 = arrayListOf(
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
+        R.drawable.movie__1,
+        R.drawable.movie__2,
+        R.drawable.movie__3,
+        R.drawable.movie__4,
+        R.drawable.movie__5,
+        R.drawable.movie__6,
+        R.drawable.movie__7,
+        R.drawable.movie__1,
+        R.drawable.movie__2,
+        R.drawable.movie__3,
+        R.drawable.movie__4,
+        R.drawable.movie__5,
+        R.drawable.movie__6,
+        R.drawable.movie__7,
     )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-
         return inflater.inflate(R.layout.fragment_setting, container, false)
     }
 
@@ -59,45 +56,43 @@ class SettingFragment : Fragment() {
             view.findViewById<RecyclerView>(R.id.thirdRecyclerViewInSearchFragment)
         val fourthRecyclerViewInSearchFragment =
             view.findViewById<RecyclerView>(R.id.fourthRecyclerViewInSearchFragment)
-        addRecyclerViewForFirstRVSearchFirst(
+        addRecyclerViewForFirstRVSettingFirst(
             firstRecyclerViewInSearchFragment,
             movieImagesForSearchFragmentRecyclerView1
         )
-        addRecyclerViewForRVSearchSecond(
+        addRecyclerViewForRVSettingSecond(
             secondRecyclerViewInSearchFragment,
             movieImagesForSearchFragmentRecyclerView2
         )
-        addRecyclerViewForRVSearchSecond(
+        addRecyclerViewForRVSettingSecond(
             thirdRecyclerViewInSearchFragment,
             movieImagesForSearchFragmentRecyclerView1
         )
-        addRecyclerViewForRVSearchSecond(
+        addRecyclerViewForRVSettingSecond(
             fourthRecyclerViewInSearchFragment,
             movieImagesForSearchFragmentRecyclerView2
         )
     }
 
 
-    private fun addRecyclerViewForFirstRVSearchFirst(
-        RView: RecyclerView,
-        imagesList: ArrayList<Int>
+    private fun addRecyclerViewForFirstRVSettingFirst(
+        RView: RecyclerView, imagesList: ArrayList<Int>
     ) {
-
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         RView.adapter =
-            FirstRecyclerViewAdapterOfSearchFragment(imagesList)
+            FirstRecyclerViewAdapterOfSettingFragment(imagesList)
 
     }
 
-    private fun addRecyclerViewForRVSearchSecond(
+    private fun addRecyclerViewForRVSettingSecond(
         RView: RecyclerView,
         imagesList: ArrayList<Int>
     ) {
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         RView.adapter =
-            FirstRecyclerViewAdapterOfSearchFragment(imagesList)
+            SecondRecyclerViewAdapterOfSettingActivity(imagesList)
     }
 
     companion object {

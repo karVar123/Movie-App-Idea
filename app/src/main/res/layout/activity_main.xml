@@ -26,10 +26,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:mbn_backgroundBottomColor="@color/mainDarkBg"
+        app:mbn_backgroundBottomColor="#1E1B2D"
         app:mbn_defaultIconColor="#FDFFFF"
         app:mbn_rippleColor="@color/mainDarkBg"
         app:mbn_selectedIconColor="#FDFFFF"
+        android:outlineSpotShadowColor="@color/white"
         app:mbn_shadowColor="#ffff" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

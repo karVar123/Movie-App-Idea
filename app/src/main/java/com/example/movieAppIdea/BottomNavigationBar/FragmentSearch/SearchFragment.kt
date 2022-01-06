@@ -7,38 +7,60 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.RecyclerView.FirstRecyclerViewAdapterOfSearchFragment
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.RecyclerView.SecondRecyclerViewAdapterOfSearchActivity
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.FirstRecyclerViewAdapterOfSearchFragment
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.SecondRecyclerViewAdapterOfSearchActivity
 import com.example.movieAppIdea.R
 import com.example.movieAppIdea.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
     lateinit var binding: FragmentSearchBinding
     private val movieImagesForSearchFragmentRecyclerView1 = arrayListOf(
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-    )
+        R.drawable.horizontal_movies__2,
+        R.drawable.horizontal_movies__3,
+        R.drawable.horizontal_movies__1,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__2,
+        R.drawable.horizontal_movies__3,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__1,
+
+        )
+
     private val movieImagesForSearchFragmentRecyclerView2 = arrayListOf(
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-    )
+        R.drawable.movie__5,
+        R.drawable.movie__4,
+        R.drawable.movie__1,
+        R.drawable.movie__7,
+        R.drawable.movie__2,
+        R.drawable.movie__6,
+        R.drawable.movie__3,
+        R.drawable.movie__5,
+        R.drawable.movie__4,
+        R.drawable.movie__3,
+        R.drawable.movie__2,
+        R.drawable.movie__1,
+        R.drawable.movie__7,
+        R.drawable.movie__6,
+
+        )
+
+    private val movieImagesForSearchFragmentRecyclerView3 = arrayListOf(
+        R.drawable.movie__2,
+        R.drawable.movie__3,
+        R.drawable.movie__1,
+        R.drawable.movie__4,
+        R.drawable.movie__6,
+        R.drawable.movie__5,
+        R.drawable.movie__1,
+        R.drawable.movie__7,
+        R.drawable.movie__2,
+        R.drawable.movie__4,
+        R.drawable.movie__5,
+        R.drawable.movie__3,
+        R.drawable.movie__6,
+        R.drawable.movie__7,
+
+        )
 
     override fun onCreateView(
         inflater: LayoutInflater, view: ViewGroup?,
@@ -49,25 +71,11 @@ class SearchFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentSearchBinding.inflate(layoutInflater)
-        super.onViewCreated(view, savedInstanceState)
-        val firstRecyclerViewInSearchFragment =
-            view.findViewById<RecyclerView>(R.id.firstRecyclerViewInSearchFragment)
-        val secondRecyclerViewInSearchFragment =
-            view.findViewById<RecyclerView>(R.id.secondRecyclerViewInSearchFragment)
+        super.onViewCreated(binding.root, savedInstanceState)
 
-        addRecyclerViewForFirstRVSearchFirst(
-            firstRecyclerViewInSearchFragment, movieImagesForSearchFragmentRecyclerView1
-        )
-        addRecyclerViewForFirstRVSearchSecond(
-            secondRecyclerViewInSearchFragment, movieImagesForSearchFragmentRecyclerView2
-        )
+        creatingRecyclerViews()
 
 
-        /*firstRecyclerViewInSearchFragment?.layoutManager =
-            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        firstRecyclerViewInSearchFragment?.adapter =
-            FirstRecyclerViewAdapterOfSearchFragment(movieImagesForSearchFragmentRecyclerView1)
-            */
     }
 
     companion object {
@@ -82,7 +90,6 @@ class SearchFragment : Fragment() {
         RView: RecyclerView,
         imagesList: ArrayList<Int>
     ) {
-
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         RView.adapter =
@@ -96,9 +103,57 @@ class SearchFragment : Fragment() {
     ) {
 
         RView.layoutManager =
-            LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         RView.adapter =
             SecondRecyclerViewAdapterOfSearchActivity(imagesList)
+
+    }
+
+    private fun creatingRecyclerViews() {
+        val recyclerViewInSearchFragment1 =
+            view?.findViewById<RecyclerView>(R.id.recyclerViewInSearchFragment_1)
+        val recyclerViewInSearchFragment2 =
+            view?.findViewById<RecyclerView>(R.id.recyclerViewInSearchFragment_2)
+        val recyclerViewInSearchFragment3 =
+            view?.findViewById<RecyclerView>(R.id.recyclerViewInSearchFragment_3)
+        val recyclerViewInSearchFragment4 =
+            view?.findViewById<RecyclerView>(R.id.recyclerViewInSearchFragment_4)
+        val recyclerViewInSearchFragment5 =
+            view?.findViewById<RecyclerView>(R.id.recyclerViewInSearchFragment_5)
+        val recyclerViewInSearchFragment6 =
+            view?.findViewById<RecyclerView>(R.id.recyclerViewInSearchFragment_6)
+        val recyclerViewInSearchFragment7 =
+            view?.findViewById<RecyclerView>(R.id.recyclerViewInSearchFragment_7)
+        val recyclerViewInSearchFragment8 =
+            view?.findViewById<RecyclerView>(R.id.recyclerViewInSearchFragment_8)
+
+        addRecyclerViewForFirstRVSearchFirst(
+            recyclerViewInSearchFragment1!!, movieImagesForSearchFragmentRecyclerView1
+        )
+        addRecyclerViewForFirstRVSearchSecond(
+            recyclerViewInSearchFragment2!!, movieImagesForSearchFragmentRecyclerView3
+        )
+
+        addRecyclerViewForFirstRVSearchSecond(
+            recyclerViewInSearchFragment3!!, movieImagesForSearchFragmentRecyclerView2
+        )
+        addRecyclerViewForFirstRVSearchSecond(
+            recyclerViewInSearchFragment4!!, movieImagesForSearchFragmentRecyclerView3
+        )
+        addRecyclerViewForFirstRVSearchSecond(
+            recyclerViewInSearchFragment5!!, movieImagesForSearchFragmentRecyclerView2
+        )
+
+        addRecyclerViewForFirstRVSearchSecond(
+            recyclerViewInSearchFragment6!!, movieImagesForSearchFragmentRecyclerView3
+        )
+        addRecyclerViewForFirstRVSearchSecond(
+            recyclerViewInSearchFragment7!!, movieImagesForSearchFragmentRecyclerView2
+        )
+
+        addRecyclerViewForFirstRVSearchSecond(
+            recyclerViewInSearchFragment8!!, movieImagesForSearchFragmentRecyclerView3
+        )
 
     }
 }

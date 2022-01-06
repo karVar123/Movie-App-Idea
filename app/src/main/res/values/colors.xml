@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <!--    custom colors       -->
-    <color name="mainDarkBg">#262626</color>
+<!--    <color name="mainDarkBg">#262626</color>-->
+    <color name="mainDarkBg">#100E19</color>
 
 
 </resources>

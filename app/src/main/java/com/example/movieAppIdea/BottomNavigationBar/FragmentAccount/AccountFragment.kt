@@ -7,37 +7,35 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.RecyclerView.FirstRecyclerViewAdapterOfSearchFragment
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.RecyclerView.SecondRecyclerViewAdapterOfSearchActivity
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.SearchFragment
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.FirstRecyclerViewAdapterOfSearchFragment
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.SecondRecyclerViewAdapterOfSettingActivity
 import com.example.movieAppIdea.R
-import com.example.movieAppIdea.databinding.FragmentSearchBinding
 
 class AccountFragment : Fragment() {
     private val movieImagesForSearchFragmentRecyclerView1 = arrayListOf(
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
-        R.drawable.images,
+        R.drawable.horizontal_movies__4,
+        R.drawable.horizontal_movies__4,
+//        R.drawable.images,
+//        R.drawable.images,
+//        R.drawable.images,
+//        R.drawable.images,
+//        R.drawable.images,
     )
     private val movieImagesForSearchFragmentRecyclerView2 = arrayListOf(
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-        R.drawable.the_imitation_game_image,
-        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
-//        R.drawable.the_imitation_game_image,
-//        R.drawable.the_social_network,
+        R.drawable.movie__1,
+        R.drawable.movie__2,
+        R.drawable.movie__3,
+        R.drawable.movie__4,
+        R.drawable.movie__5,
+        R.drawable.movie__6,
+        R.drawable.movie__7,
+        R.drawable.movie__1,
+        R.drawable.movie__2,
+        R.drawable.movie__3,
+        R.drawable.movie__4,
+        R.drawable.movie__5,
+        R.drawable.movie__6,
+        R.drawable.movie__7,
     )
 
     override fun onCreateView(
@@ -92,7 +90,7 @@ class AccountFragment : Fragment() {
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         RView.adapter =
-            SecondRecyclerViewAdapterOfSearchActivity(imagesList)
+            SecondRecyclerViewAdapterOfSettingActivity(imagesList)
 
     }
 
