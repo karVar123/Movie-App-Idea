@@ -5,9 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentContainerView
 import androidx.viewpager.widget.ViewPager
 import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.Fragments.CartoonFragmentSearch
 import com.example.movieAppIdea.BottomNavigationBar.FragmentSearch.Fragments.FilmsFragmentSearch
@@ -38,8 +35,8 @@ class SearchFragment : Fragment() {
 
         initialization()
 
-        val supportFragmentManager = activity?.supportFragmentManager
-        fragmentAdapter = supportFragmentManager?.let { FragmentAdapter(it) }!!
+
+        fragmentAdapter = FragmentAdapter(activity?.supportFragmentManager!!)
         fragmentAdapter.addFragment(FilmsFragmentSearch(), "Films")
         fragmentAdapter.addFragment(SerialsFragmentSearch(), "Serials")
         fragmentAdapter.addFragment(CartoonFragmentSearch(), "Cartoons")
