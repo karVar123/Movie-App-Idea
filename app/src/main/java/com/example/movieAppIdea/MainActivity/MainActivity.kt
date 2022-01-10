@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(FavoriteFragment.newInstance())
                 }
                 2 -> {
-                    replaceFragment(HomeFragment.                                                                                       newInstance())
+                    replaceFragment(HomeFragment.newInstance())
                 }
                 3 -> {
                     replaceFragment(AccountFragment.newInstance())

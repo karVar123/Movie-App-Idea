@@ -29,12 +29,14 @@
     </style>
 
     <style name="tabLayoutTextStyle">
-<!--        <item name="android:background">#B0100E19</item>-->
+        <item name="android:background">@color/mainBgLite</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="tabIndicatorHeight">4dp</item>
         <item name="android:textStyle">bold</item>
-<!--        <item name="android:textColor">@color/white</item>-->
         <item name="android:textSize">16sp</item>
-        <item name="tabSelectedTextColor">#E20909</item>
-        <item name="tabIndicatorColor">#E60041</item>
-        <item name="tabTextColor">#3A0DCD</item>
+        <item name="tabSelectedTextColor">@color/selectedTextColor</item>
+        <item name="tabIndicatorColor">@color/tabIndicatorColor</item>
+        <item name="tabTextColor">@color/defaultTextColor</item>
     </style>
 </resources>

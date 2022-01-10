@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.FirstRecyclerViewAdapterOfSettingFragment
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.SecondRecyclerViewAdapterOfSettingActivity
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.FirstRecyclerViewAdapterOfSearchFragment
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.SecondRecyclerViewAdapterOfSearchActivity
 import com.example.movieAppIdea.R
 
 class SettingFragment : Fragment() {
@@ -81,7 +81,7 @@ class SettingFragment : Fragment() {
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         RView.adapter =
-            FirstRecyclerViewAdapterOfSettingFragment(imagesList)
+            FirstRecyclerViewAdapterOfSearchFragment(imagesList)
 
     }
 
@@ -92,7 +92,7 @@ class SettingFragment : Fragment() {
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         RView.adapter =
-            SecondRecyclerViewAdapterOfSettingActivity(imagesList)
+            SecondRecyclerViewAdapterOfSearchActivity(imagesList)
     }
 
     companion object {

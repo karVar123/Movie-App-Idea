@@ -18,7 +18,7 @@ class FragmentAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(
 
     override fun getPageTitle(position: Int) = fragmentTitle[position]
 
-    fun addFragment(fragment: Fragment , title: String) {
+    fun addFragment(fragment: Fragment, title: String) {
         fragmentList.add(fragment)
         fragmentTitle.add(title)
     }

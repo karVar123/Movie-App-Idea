@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.FirstRecyclerViewAdapterOfSearchFragment
-import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.SecondRecyclerViewAdapterOfSettingActivity
+import com.example.movieAppIdea.BottomNavigationBar.FragmentSetting.RecyclerView.SecondRecyclerViewAdapterOfSearchActivity
 import com.example.movieAppIdea.R
 
 class AccountFragment : Fragment() {
@@ -90,7 +90,7 @@ class AccountFragment : Fragment() {
         RView.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         RView.adapter =
-            SecondRecyclerViewAdapterOfSettingActivity(imagesList)
+            SecondRecyclerViewAdapterOfSearchActivity(imagesList)
 
     }
 

@@ -11,6 +11,11 @@
     <!--    custom colors       -->
 <!--    <color name="mainDarkBg">#262626</color>-->
     <color name="mainDarkBg">#100E19</color>
+    <color name="mainBgLite">#1F1A2D</color>
+    <color name="selectedTextColor">#F0F0F1</color>
+    <color name="defaultTextColor">#ABA8B0</color>
+    <color name="tabIndicatorColor">#EC1954</color>
+
 
 
 </resources>
