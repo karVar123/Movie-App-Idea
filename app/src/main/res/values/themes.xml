@@ -28,6 +28,27 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="setting_movieTitleTextStyle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="movieDescriptionTextStyle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
     <style name="tabLayoutTextStyle">
         <item name="android:background">@color/mainBgLite</item>
         <item name="android:layout_width">0dp</item>
@@ -38,5 +59,21 @@
         <item name="tabSelectedTextColor">@color/selectedTextColor</item>
         <item name="tabIndicatorColor">@color/tabIndicatorColor</item>
         <item name="tabTextColor">@color/defaultTextColor</item>
+    </style>
+
+    <style name="setting_layout_bg">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:background">@drawable/setting_layout_bg</item>
+    </style>
+
+    <style name="setting_layout_bg.settingLayout_bg_small">
+        <item name="android:layout_width">156dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:background">@drawable/setting_layout_bg</item>
     </style>
 </resources>

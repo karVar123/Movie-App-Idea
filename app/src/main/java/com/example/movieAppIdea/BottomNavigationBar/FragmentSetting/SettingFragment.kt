@@ -48,52 +48,11 @@ class SettingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val firstRecyclerViewInSearchFragment =
-            view.findViewById<RecyclerView>(R.id.firstRecyclerViewInSettingFragment)
-        val secondRecyclerViewInSearchFragment =
-            view.findViewById<RecyclerView>(R.id.secondRecyclerViewInSettingFragment)
-        val thirdRecyclerViewInSearchFragment =
-            view.findViewById<RecyclerView>(R.id.thirdRecyclerViewInSearchFragment)
-        val fourthRecyclerViewInSearchFragment =
-            view.findViewById<RecyclerView>(R.id.fourthRecyclerViewInSearchFragment)
-        addRecyclerViewForFirstRVSettingFirst(
-            firstRecyclerViewInSearchFragment,
-            movieImagesForSearchFragmentRecyclerView1
-        )
-        addRecyclerViewForRVSettingSecond(
-            secondRecyclerViewInSearchFragment,
-            movieImagesForSearchFragmentRecyclerView2
-        )
-        addRecyclerViewForRVSettingSecond(
-            thirdRecyclerViewInSearchFragment,
-            movieImagesForSearchFragmentRecyclerView1
-        )
-        addRecyclerViewForRVSettingSecond(
-            fourthRecyclerViewInSearchFragment,
-            movieImagesForSearchFragmentRecyclerView2
-        )
-    }
-
-
-    private fun addRecyclerViewForFirstRVSettingFirst(
-        RView: RecyclerView, imagesList: ArrayList<Int>
-    ) {
-        RView.layoutManager =
-            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        RView.adapter =
-            FirstRecyclerViewAdapterOfSearchFragment(imagesList)
 
     }
 
-    private fun addRecyclerViewForRVSettingSecond(
-        RView: RecyclerView,
-        imagesList: ArrayList<Int>
-    ) {
-        RView.layoutManager =
-            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        RView.adapter =
-            SecondRecyclerViewAdapterOfSearchActivity(imagesList)
-    }
+
+
 
     companion object {
         @JvmStatic

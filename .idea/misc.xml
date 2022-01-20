@@ -5,10 +5,13 @@
       <map>
         <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/fragment_images_corner_and_bg.xml" value="0.35833333333333334" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/ic_baseline_movie_24.xml" value="0.20879629629629629" />
+        <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/ic_notification.xml" value="0.35833333333333334" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/ic_search.xml" value="0.403125" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/ic_setting.xml" value="0.20879629629629629" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/ic_star.xml" value="0.35342465753424657" />
+        <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/registration_btn_bg.xml" value="0.35833333333333334" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/search_view_background.xml" value="0.35833333333333334" />
+        <entry key="..\:/MovieAppIdea/app/src/main/res/drawable/setting_layout_bg.xml" value="0.3148148148148148" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/activity_main.xml" value="0.38697916666666665" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/first_recycler_view_item_in_search_fragment.xml" value="0.3439814814814815" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/fragment_account.xml" value="0.38697916666666665" />
@@ -19,7 +22,7 @@
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/fragment_multfilms_search.xml" value="0.3439814814814815" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/fragment_search.xml" value="0.3619094008767657" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/fragment_serials_search.xml" value="0.3314814814814815" />
-        <entry key="..\:/MovieAppIdea/app/src/main/res/layout/fragment_setting.xml" value="0.38697916666666665" />
+        <entry key="..\:/MovieAppIdea/app/src/main/res/layout/fragment_setting.xml" value="0.2857142857142857" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/fragment_t_v_chanels_search.xml" value="0.3439814814814815" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/search_fragment_recycler_view_item_horizontal.xml" value="0.3439814814814815" />
         <entry key="..\:/MovieAppIdea/app/src/main/res/layout/search_fragment_recycler_view_item_small_horizontal.xml" value="0.3439814814814815" />

@@ -27,8 +27,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideLineEnd"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideLineStart"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,99 +38,299 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/searchBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_margin="16dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginEnd="-30dp"
-                    android:src="@drawable/ic_search" />
-
-                <EditText
+                <TextView
+                    style="@style/movieDescriptionTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="30dp"
-                    android:backgroundTint="@color/white"
-                    android:paddingStart="30dp"
-                    android:paddingEnd="0dp"
-                    android:textColor="@color/white"
-                    android:textColorHighlight="#FFFFFF"
-                    android:textColorLink="#FFFFFF" />
+                    android:layout_margin="0dp"
+                    android:background="@drawable/registration_btn_bg"
+                    android:padding="15dp"
+                    android:text="SignIn or Registration Now" />
+
             </LinearLayout>
 
             <LinearLayout
+                style="@style/setting_layout_bg"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/setting_movieTitleTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:text="New"
+                    android:text="Following" />
+
+                <TextView
+                    style="@style/movieDescriptionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Go to Following" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/setting_layout_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/setting_movieTitleTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="App account" />
+
+                <TextView
+                    style="@style/movieDescriptionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 amd"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/setting_layout_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_notification" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Notifications"
                     android:textColor="@color/white"
-                    android:textSize="20dp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/firstRecyclerViewInSettingFragment"
-                    android:layout_width="match_parent"
+            <LinearLayout
+                style="@style/setting_layout_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_certificate" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
-                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
-                    app:layout_constraintTop_toBottomOf="@id/searchBar" />
+                    android:layout_gravity="center"
+                    android:text="Certificate activation"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/secondRecyclerViewInSettingFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
-                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
-                    app:layout_constraintTop_toBottomOf="@id/searchBar" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/thirdRecyclerViewInSearchFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
-                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
-                    app:layout_constraintTop_toBottomOf="@id/searchBar" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    style="@style/setting_layout_bg.settingLayout_bg_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/fourthRecyclerViewInSearchFragment"
-                        android:layout_width="match_parent"
+                    <ImageView
+                        style="@style/settings_image_style"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_wallet" />
+
+                    <TextView
+                        android:layout_width="90dp"
                         android:layout_height="wrap_content"
-                        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
-                        app:layout_constraintStart_toStartOf="@id/guideLineStart"
-                        app:layout_constraintTop_toBottomOf="@id/searchBar" />
+                        android:layout_gravity="center"
+                        android:text="Online wallet"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/setting_layout_bg.settingLayout_bg_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/settings_image_style"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_bookmark" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Watch Later"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/setting_layout_bg.settingLayout_bg_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/settings_image_style"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_views" />
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Already watched"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/setting_layout_bg.settingLayout_bg_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/settings_image_style"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_bank_card" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Payment method"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/setting_layout_bg.settingLayout_bg_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/settings_image_style"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_tv" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Entrance by code"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/setting_layout_bg.settingLayout_bg_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/settings_image_style"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_setting_red"
+                        app:mbn_defaultIconColor="#A4A0B1" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Settings"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/setting_layout_bg.settingLayout_bg_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/settings_image_style"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_help" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Help"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/setting_layout_bg.settingLayout_bg_small"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/settings_image_style"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_about" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="About"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>
